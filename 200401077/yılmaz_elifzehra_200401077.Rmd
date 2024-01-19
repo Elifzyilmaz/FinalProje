@@ -14,3 +14,48 @@ Biz, Stratejinet Pazarlama Çözümleri, müşterilerimize özel pazarlama strat
 Bu proje, [sleep health and lifestyle dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset) adlı Kaggle veri setini kullanarak uyku hapı üretimi yapan bir firma için özel pazarlama stratejileri geliştirmeyi amaçlamaktadır. İlk olarak, hedef kitle belirleme ve demografik analiz yapılacak, potansiyel müşteri grupları ve onların ihtiyaçları daha detaylı bir şekilde incelenecektir.Analiz etapları, müşteri segmentasyonu ve pazarın genel yapısını anlamak için kullanılacak veri odaklı yöntemleri içerecektir.
 
 Bu analizlerin sonucunda elde edilecek veriler, hedef kitleye özgü pazarlama kampanyalarının oluşturulmasına ve uyku hapının daha etkili bir şekilde pazarlanmasına olanak tanıyacaktır.
+
+# Q3 : Veri seti keşifsel analizi
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Dosyayi ithal et
+library(readr)
+path<-file.path("/home/raskolnikov/FinalProje/200401077/Sleep_health_and_lifestyle_dataset.csv")
+myDF <- read_csv(path)
+```
+
+Veri seti Kaggle web sitesinden indirilmiştir ve **readr::read_csv()** fonksiyonu kullanılarak **`r class(myDF)[[1]]`** tipinde bir değişkene ithal edilmiştir. Veri boyutları aşağıdaki gibidir :
+
+-   Satır sayısı : `r nrow(myDF)`
+-   Sütun sayısı : `r ncol(myDF)`
+
+Veri setinin ön görsellemesi aşağıda verilmiştir.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+myDF
+```
+
+Veri setini incelediğimizde, problem çözümü için kullanacağımız sütunlardan Occupation sütununun bazı kayıtlarında Engineer, bazı kayıtlarında Software Engineer yazdığını görüyoruz. Bu durum tutarlılık sorunlarına neden olabilir. Software Engineer yazan kayıtlar, Engineer olarak düzeltilmelidir.
+
+Aynı şekilde, BMI Category sütununda bazı kayıtlarda Normal, bazılarında Normal Weight yazdığını görüyoruz. Tutarlılık sorununa neden olmaması için Normal yazan kayıtlar, Normal Weight olarak düzeltilmelidir.
+
+Yaş verilerinin dağılımı aşağıdaki histogramda gösterilmiştir.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+hist(myDF$Age, breaks = 20)
+```
+
+Görüldüğü üzere verilerin büyük çoğunluğu 40-45 yaş aralığından gelmektedir. 40-45 yaş arasındaki insanların uyku sorunlarına daha duyarlı olduğu düşünülebilir. Bu nedenle, pazarlama stratejisini bu yaş grubundaki potansiyel müşterilere odaklamak, ürünün talebini artırabilir.
+
+Uyku bozukluğu verilerinin dağılımı aşağıdaki grafikte verilmiştir.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+ggplot(myDF, aes(x = `Sleep Disorder`, fill = `Sleep Disorder`)) +
+  geom_bar() +
+  labs(title = "Sleep Disorder Distribution", x = "Sleep Disorder", y = "Count") +
+  theme_minimal()
+
+```
+
+Çoğu veride herhangi bir uyku bozukluğu görülmezken Insomnia ve Sleep Apnea aynı oranda görülmektedir. Kampanya oluştururken bu iki uyku bozukluğuna da aynı derecede önem verilmesi gerekmektedir.
