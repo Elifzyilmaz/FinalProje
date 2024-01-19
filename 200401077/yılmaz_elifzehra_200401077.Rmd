@@ -1,0 +1,10 @@
+---
+title: 'Proje Rapor : Elif Zehra Yılmaz 200401077'
+output:
+  html_document:
+    df_print: paged
+---
+
+# Q1 : Problem tanımı
+
+Biz, Stratejinet Pazarlama Çözümleri, müşterilerimize özel pazarlama stratejileri sunan bir pazarlama danışmanlığı şirketiyiz. Müşterimiz, uyku hapı üretimi yapan bir firma. Problemimiz, uyku hapı için hedef kitle belirleme, kampanya oluşturma ve ürün stratejileri geliştirmedir.
