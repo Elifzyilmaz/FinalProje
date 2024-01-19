@@ -8,3 +8,9 @@ output:
 # Q1 : Problem tanımı
 
 Biz, Stratejinet Pazarlama Çözümleri, müşterilerimize özel pazarlama stratejileri sunan bir pazarlama danışmanlığı şirketiyiz. Müşterimiz, uyku hapı üretimi yapan bir firma. Problemimiz, uyku hapı için hedef kitle belirleme, kampanya oluşturma ve ürün stratejileri geliştirmedir.
+
+# Q2 : Proje Amacı
+
+Bu proje, [sleep health and lifestyle dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset) adlı Kaggle veri setini kullanarak uyku hapı üretimi yapan bir firma için özel pazarlama stratejileri geliştirmeyi amaçlamaktadır. İlk olarak, hedef kitle belirleme ve demografik analiz yapılacak, potansiyel müşteri grupları ve onların ihtiyaçları daha detaylı bir şekilde incelenecektir.Analiz etapları, müşteri segmentasyonu ve pazarın genel yapısını anlamak için kullanılacak veri odaklı yöntemleri içerecektir.
+
+Bu analizlerin sonucunda elde edilecek veriler, hedef kitleye özgü pazarlama kampanyalarının oluşturulmasına ve uyku hapının daha etkili bir şekilde pazarlanmasına olanak tanıyacaktır.
