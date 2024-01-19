@@ -136,3 +136,29 @@ ggplot(myDF, aes(x = myDF$`Sleep Duration`, y = myDF$`BMI Category`, color = Gen
 ```
 
 Bu grafikte, overweight kadınların daha fazla olduğu ve uyku sürelerinin daha kısa olduğu görülmektedir. Bu da kampanyada dikkate alınmalıdır.
+
+# Q7 : Sonuç değerlendirme, tavsiyeler
+
+1.  **Sonuçların Mantıklılığı:**
+
+    -   Yaptığımız çıkarımlar mantıklı görünmektedir. Ancak, daha fazla analiz, derinleme ve belki de alan uzmanları veya sağlık profesyonelleri ile işbirliği yaparak elde ettiğimiz sonuçlar daha güvenilir olabilir.
+
+2.  **Ana Problemi Çözme Yetisi:**
+
+    -   Elde edilen sonuçların, proje başlangıcındaki ana problemi çözmede başarılı olduğu söylenebilir.
+
+3.  **Müşteri Kullanımı:**
+
+    -   Elde edilen sonuçlar müşteriler tarafından hedef kitleleri belirleyerek kampanya kurmasında, uyku hapının niteiklerini belirlemede katkı sağlar.
+
+4.  **Analizin Kuvvetli ve Zayıf Yanları:**
+
+    -   Analizin güçlü yanları, kullanılan etkili analiz yöntemleri ve doğru veri seti seçimi. Zayıf yanlar arasında, belki de daha fazla veri toplama veya belirli bir analiz yöntemini daha derinlemesine inceleme olabilir.
+
+5.  **Çalışmanın İyileştirilmesi ve İlerletilmesi:**
+
+    -   Bu çalışmayı ileride iyileştirmek için daha fazla veri toplama ve belirli analiz tekniklerini daha derinlemesine inceleme gerekebilir.
+
+6.  **Tavsiyeler:**
+
+    -   Daha kapsamlı veriseti kullanma, neden-sonuç ilişkilerini daha derinlemesine araştırmak ve analiz etme, analize dahil edilmemiş ancak önemli olabilecek diğer değişkenleri göz önünde bulundurma. Bu tavsiyeler, çalışmanın daha etkili ve kapsamlı hale gelmesine katkı sağlayabilir.
