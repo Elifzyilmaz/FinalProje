@@ -82,3 +82,57 @@ print(myDF[myDF$`BMI Category` == "Normal Weight", "BMI Category", drop = FALSE]
 ```
 
 BMI Category sütunundaki Normal kayıtları, Normal Weight kayıtlarına dönüştürülmüştür.
+
+# Q5 : Veri mühendisliği
+
+## 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+
+# Scatter plot çizimi
+ggplot(myDF, aes(x = myDF$`Physical Activity Level`, y = myDF$`Quality of Sleep`, color = myDF$`Physical Activity Level`)) +
+  geom_point() +
+  labs(title = "Uyku Kalitesi ile Fiziksel Aktivite İlişkisi", x = "Fiziksel Aktivite", y = "Uyku Kalitesi") +
+  theme_minimal()
+```
+
+Grafikten görüldüğü üzere fiziksel aktivite arttıkça uyku kalitesi de artmaktadır. Fiziksel aktivitesi düşük olan kişilere uyku sorunlarına çözüm sunan bir ürüne odaklanılması ve bu kişilere yönelik kampanyalar yapılması gerekmektedir.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+
+# Scatter plot çizimi
+ggplot(myDF, aes(x = myDF$`Occupation`, y = myDF$`Stress Level`, color = Occupation)) +
+  geom_point() +
+  labs(title = "Meslek ve Stres Düzeyi İlişkisi", x = "Occupation", y = "Stress Level") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  # X eksenindeki metinleri 45 derece açıyla çevir
+```
+
+Bu grafikte stres düzeyi en yüksek olan meslek gruplarının mühendisler ve hemşireler olduğu görülüyor. Mühendislik ve sağlık sektörleri gibi yüksek stresli meslek gruplarına yönelik işbirlikleri ve promosyonlar düzenlenmeli, uyku haplarının stresle baş etmeye yardımcı olduğu ve daha iyi bir uyku sağladığı vurgulanmalıdır.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+
+# Scatter plot çizimi
+ggplot(myDF, aes(x = myDF$`Age`, y = myDF$`Sleep Duration`)) +
+  geom_point() +
+  labs(title = "Sleep Duration ve Age İlişkisi", x = "Age", y = "Sleep Duration") +
+  theme_minimal()
+```
+
+Bu grafikte, orta yaş gruplarının ileri yaş gruplarına göre daha az uyuduğu görülmektedir. Orta yaş grupları kampanyalarda dikkate alınmalıdır.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+
+# Scatter plot çizimi
+ggplot(myDF, aes(x = myDF$`Sleep Duration`, y = myDF$`BMI Category`, color = Gender)) +
+  geom_point() +
+  labs(title = "Uyku Süresi, BMI ve Cinsiyet İlişkisi", x = "Uyku Süresi", y = "BMI") +
+  theme_minimal()
+
+```
+
+Bu grafikte, overweight kadınların daha fazla olduğu ve uyku sürelerinin daha kısa olduğu görülmektedir. Bu da kampanyada dikkate alınmalıdır.
